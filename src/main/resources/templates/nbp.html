@@ -7,13 +7,14 @@
     <script src="currency.js"></script>
 
 </head>
-<p>
 
-<p id="currency-eur"></p>
-<p id="exchange-rate-eur"></p>
+<body>
 
-<p id="currency-usd"></p>
-<p id="exchange-rate-usd"></p>
+<div th:each="currency: ${currencies}">
+    <p th:id="'currency-'+${currency}">Tekst</p>
+    <p th:id="'exchange-rate-'+${currency}">Test2</p>
+
+</div>
 
 
 </body>
