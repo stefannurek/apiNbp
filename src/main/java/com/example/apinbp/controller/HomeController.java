@@ -11,9 +11,14 @@ import java.util.Arrays;
 public class HomeController {
 
     @GetMapping("/")
-    public String home(ModelMap modelMap){
-        modelMap.put("curriencies", Arrays.asList("eur", "usd"));
+    public String home(){
         return "home";
+    }
+
+    @GetMapping("/nbp")
+    public String getnbp(ModelMap modelMap){
+        modelMap.put("currencies", Arrays.asList("eur", "usd"));
+        return "nbp";
     }
 
 }
