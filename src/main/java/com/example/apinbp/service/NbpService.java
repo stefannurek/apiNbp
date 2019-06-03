@@ -11,7 +11,6 @@ public class NbpService implements CurrencyService {
     public Currency getCurrency(String currency){
         String apiPath ="http://api.nbp.pl/api/exchangerates/rates/c/"+ currency +"/?format=json";
         Currency currencyModel = new RestTemplate().getForObject(apiPath, Currency.class);
-
         return new RestTemplate().getForObject(apiPath, Currency.class);
     }
 }
